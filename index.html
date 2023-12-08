@@ -40,10 +40,10 @@
 
                     <div class="nav__dark">
                         <!-- Theme change button -->
-                        <button class="toggle-button" id="centered-toggle-button">Toggle</button>
+                        <!-- <button class="toggle-button" id="centered-toggle-button">Toggle</button>
 
-                        <span class="change-theme-name">Dark mode</span>
-                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+                        <span class="change-theme-name">Toggle</span>
+                        <i class="ri-moon-line change-theme" id="theme-button"></i> -->
                     </div>
 
                     <i class="ri-close-line nav__close" id="nav-close"></i>
@@ -56,6 +56,9 @@
         </header>
 
         <main class="main">
+            <div id="centered-toggle-button" class="settings">
+                <img src="assets/images/settings.svg" alt="">
+            </div>
             <!--==================== HOME ====================-->
             <section class="home" id="home">
                 <img src="assets/img/home1.jpg" alt="" class="home__img">
@@ -461,10 +464,95 @@
 
         <div class="togg hide">
             <div class="modal off" id="modal">
-            <h2>Modal Window</h2>
-            <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis deserunt corrupti, ut fugit magni qui quasi nisi amet repellendus non fuga omnis a sed impedit explicabo accusantium nihil doloremque consequuntur.</div>
+            <h2>Change Theme</h2>
+            <div class="content">
+                <div class="pop-up-body">
+                    <div class="container">
+                      <div class="material-textfield">
+                        <input id="prop" placeholder=" " type="text" />
+                        <label>Theme Proposition</label>
+                      </div>
+                    </div>
+              
+                    <div class="title">Mood</div>
+                    <div class="flex">
+                      <div class="emoji" data-mood="angry">
+                        <img src="assets/images/angry.png" alt="" />
+                      </div>
+                      <div class="emoji" data-mood="cool">
+                        <img src="assets/images/cool.png" alt="" />
+                      </div>
+                      <div class="emoji" data-mood="happy">
+                        <img src="assets/images/happy.png" alt="" />
+                      </div>
+                      <div class="emoji" data-mood="poit">
+                        <img src="assets/images/poit.png" alt="" />
+                      </div>
+                      <div class="emoji" data-mood="surprise">
+                        <img src="assets/images/surprise.png" alt="" />
+                      </div>
+                      <div class="emoji" data-mood="shocked">
+                        <img src="assets/images/shocked.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="title">Theme</div>
+                    <div class="flex flex-wrap btn-group col-xs-12">
+                      <label class="option">
+                        <input data-name="Matrix" class="radio-theme" type="radio" name="optradio" />
+                        <span class="btn btn-warning btn-option"> Matrix </span>
+                      </label>
+                      <label class="option">
+                        <input data-name="Barbie" class="radio-theme"  type="radio" name="optradio" />
+                        <span class="btn btn-warning btn-option"> Barbie </span>
+                      </label>
+                      <label class="option">
+                        <input data-name="Gaming Arina" class="radio-theme"  type="radio" name="optradio" />
+                        <span class="btn btn-warning btn-option"> Gaming Arina </span>
+                      </label>
+              
+                      <label class="option">
+                        <input data-name="Cityscape" class="radio-theme"  type="radio" name="optradio" />
+                        <span class="btn btn-warning btn-option"> Cityscape </span>
+                      </label>
+              
+                      <label class="option">
+                        <input data-name="Vintage" class="radio-theme"  type="radio" name="optradio" />
+                        <span class="btn btn-warning btn-option"> Vintage </span>
+                      </label>
+              
+                      <label class="option">
+                        <input data-name="Cyberpunk" class="radio-theme"  type="radio" name="optradio" />
+                        <span class="btn btn-warning btn-option"> Cyberpunk </span>
+                      </label>
+              
+                      <label class="option">
+                        <input data-name="Adventure" class="radio-theme"  type="radio" name="optradio" />
+                        <span class="btn btn-warning btn-option"> Adventure </span>
+                      </label>
+                    </div>
+              
+                    <div class="title">Writing Style</div>
+              
+                    <div class="flex flex-wrap btn-group col-xs-12">
+                      <label class="option">
+                        <input data-name="5 Year Child" class="radio-write-style"  type="radio" name="optradio1" />
+                        <span class="btn btn-warning btn-option"> 5 Year Child </span>
+                      </label>
+                      <label class="option">
+                        <input data-name="like a Renaissance king" class="radio-write-style" type="radio" name="optradio1" />
+                        <span class="btn btn-warning btn-option"> like a Renaissance king </span>
+                      </label>
+                      <label class="option">
+                        <input  data-name="like a rapper" class="radio-write-style" type="radio" name="optradio1" />
+                        <span class="btn btn-warning btn-option"> like a rapper </span>
+                      </label>
+                      </label>
+                    </div>
+                  </div>
+            </div>
             <div class="actions">
-                <button class="toggle-button">OK</button>
+                <button id="change" class="toggle-button">change</button>
+                <button id="cancel" class="toggle-button">cancel</button>
             </div>
         </div>
 
