@@ -221,7 +221,10 @@ document.querySelector("#change").addEventListener("click", () => {
   )?.dataset.name;
   let prop = document.querySelector("#prop").value;
 
-  console.log({ mood, theme, writingStyle, prop });
+  getTheme(prop, mood, theme, writingStyle).then((result) => {
+    console.log(result);
+  });
+  //   console.log({ mood, theme, writingStyle, prop });
   togglePopup();
 });
 
@@ -235,4 +238,52 @@ function togglePopup() {
   setTimeout(() => {
     modal.classList.toggle("off");
   }, 0);
+}
+
+export async function getTheme(text, mood, theme, writeStyle) {
+  const DEPLOYMENT_NAME = "806ucf47bd2mammkwlhsvo2p41yfvkbl";
+  const API_KEY = "5e23478df3ef42eb9abe7000d0825310";
+  const API_VERSION = "2023-09-01-preview";
+  const RESSSOURCE_NAME = "axo-openai-nuitinfo";
+
+  const url = `https://${RESSSOURCE_NAME}.openai.azure.com/openai/deployments/${DEPLOYMENT_NAME}/chat/completions?api-version=${API_VERSION}`;
+
+  const cssElements = {
+    cssVariables: {
+      "body.dark-theme": {
+        "--first-color-second": "hsl(var(--hue-color), 54%, 12%)",
+        "--title-color": "hsl(var(--hue-color), 24%, 95%)",
+        "--text-color": "hsl(var(--hue-color), 8%, 75%)",
+      },
+    },
+  };
+
+  const data_css = {
+    messages: [
+      {
+        role: "system",
+        content:
+          "You are a web designer. Answer as if you are updating styles.",
+      },
+      {
+        role: "user",
+        content: `These are the old css style update them for the Matrix theme. : ${JSON.stringify(
+          cssElements
+        )}`,
+      },
+    ],
+  };
+
+  let result = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "api-key": API_KEY,
+    },
+    body: JSON.stringify(data_css),
+  });
+
+  console.log(result.status);
+
+  return { data: result };
 }
