@@ -172,3 +172,20 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+//Modal In on Path
+var buttons = document.querySelectorAll(".toggle-button");
+var modal = document.querySelector("#modal");
+var togg = document.querySelector(".togg");
+
+[].forEach.call(buttons, function (button) {
+
+  button.addEventListener("click", function () {
+    togg.classList.toggle("hide");
+    setTimeout(()=>{
+
+        modal.classList.toggle("off");
+    },0)
+  });
+});
