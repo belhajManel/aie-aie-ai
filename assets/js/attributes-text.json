@@ -1,0 +1,84 @@
+{
+  "elements": [
+    {
+      "selector": "a.nav__logo",
+      "text": "Your New Logo Text"
+    },
+    {
+      "selector": "a.nav__link.active-link",
+      "text": "New Home Link Text"
+    },
+    {
+      "selector": "a.nav__link[href='#about']",
+      "text": "New About Link Text"
+    },
+    {
+      "selector": "a.nav__link[href='#discover']",
+      "text": "New Discover Link Text"
+    },
+    {
+      "selector": "a.nav__link[href='#place']",
+      "text": "New Places Link Text"
+    },
+    {
+      "selector": "span.change-theme-name",
+      "text": "New Theme Name Text"
+    },
+    {
+      "selector": "h1.home__data-title",
+      "text": "Explore The <br> Best <b>New Beautiful <br> Beaches</b>"
+    },
+    {
+      "selector": "section.about h2.about__title",
+      "text": "More Information <br> About The Best Beaches"
+    },
+    {
+      "selector": "p.about__description",
+      "text": "Your new about description goes here."
+    },
+    {
+      "selector": "a.button[href='#']",
+      "text": "Explore New"
+    },
+    {
+      "selector": "h2.section__title",
+      "text": "Discover the most <br> attractive places"
+    },
+    {
+      "selector": "h2.section__title.subscribe__title",
+      "text": "Subscribe Our <br> New Newsletter"
+    },
+    {
+      "selector": "p.subscribe__description",
+      "text": "New description for your newsletter."
+    },
+    {
+      "selector": "form.subscribe__form input.subscribe__input",
+      "text": "New Placeholder Text"
+    },
+    {
+      "selector": "button.button",
+      "text": "New Subscribe Button Text"
+    },
+    {
+      "selector": "h2.footer__title",
+      "text": "New Footer Title Text"
+    },
+    {
+      "selector": "p.footer__description",
+      "text": "New footer description goes here."
+    },
+    {
+      "selector": "p.footer__copy",
+      "text": "&#169; 2023 Your Company. All rights reserved."
+    },
+    {
+      "selector": "a.footer__terms-link[href='#']",
+      "text": "New Terms & Agreements"
+    },
+    {
+      "selector": "a.footer__terms-link[href='#']",
+      "text": "New Privacy Policy"
+    }
+  ]
+}
